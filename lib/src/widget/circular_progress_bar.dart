@@ -46,7 +46,7 @@ class CircleProgressState extends State<CircleProgressBar>
 
     progressController = AnimationController(
       duration: widget.duration,
-      vsync: this,
+      value: this,
     );
     progressController.value = widget.progress ?? 0.0;
 
@@ -61,7 +61,7 @@ class CircleProgressState extends State<CircleProgressBar>
     ).animate(progressCurvedAnimation);
 
     progressController.addListener(() {
-      progressStreamController.add(progressController.value);
+      progressStreamController.add(progressController.value as double);
     });
 
     SchedulerBinding.instance.addPostFrameCallback((Duration _) {
