@@ -14,5 +14,7 @@ dependencies:
   camera: ^0.5.8
   device_info: ^1.0.0
   path_provider: ^1.6.24
-  photo_manager: ^0.6.0
+  photo_manager:
+    git:
+      url: https://github.com/Anhthangtshn/flutter_photo_manager.git
   video_player: ^1.0.1
